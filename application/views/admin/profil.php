@@ -30,6 +30,7 @@
 								<td><?= $data['pencapaian']; ?></td>
 								<td><?= $data['last_updated']; ?></td>
 								<td>
+									<a href="<?= base_url('profil/view') ?>" class="btn btn-success">Lihat</a>
 									<a href="<?= base_url('profil/edit/') . $data['id'] ?>" class="btn btn-warning">Edit</a>
 							</tr>
 						<?php endforeach; ?>
@@ -61,6 +62,7 @@
 								<td><?= $data['nama']; ?></td>
 								<td><img class="img-fluid rounded" src="<?= base_url('asset'); ?>/uploads/profil/<?= $data['logo']; ?>" /></td>
 								<td>
+
 									<a href="<?= base_url('profil/edit_rekan/') . $data['id'] ?>" class="btn btn-warning">Edit</a>
 									<a href="<?= base_url('profil/delete_rekan/') . $data['id'] ?>" class="btn btn-danger">Delete</a>
 								</td>
