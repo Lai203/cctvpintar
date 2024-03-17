@@ -48,7 +48,7 @@
 	</li>
 	<hr class="sidebar-divider d-none d-md-block">
 	<li class="nav-item">
-		<a class="nav-link" href="<?= base_url('auth/logout') ?>">
+		<a class="nav-link" href="<?= base_url('auth/logout') ?> " onclick="return confirm('Are you sure you want to Logout?')">
 			<i class="fas fa-fw fa-tachometer-alt"></i>
 			<span>Logout</span></a>
 	</li>
