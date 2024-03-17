@@ -42,7 +42,7 @@ class Main_model extends CI_Model
         return $this->db->delete($table, $where);
     }
 
-    public function create_slug($title, $slug, $table)
+    public function create_slug($title, $slug_area, $table)
     {
         $extract = explode(" ", $title, 20);
         unset($extract[5]);
@@ -50,7 +50,7 @@ class Main_model extends CI_Model
         $lowercase = strtolower(($combine));
         $preslug = url_title($lowercase);
         $slug = $preslug;
-        $this->db->like($slug, $preslug, 'after');
+        $this->db->like($slug_area, $preslug, 'after');
         $checkslug = $this->db->get($table);
         if ($checkslug->num_rows() > 0) {
             $num = (int)$checkslug->num_rows() + 1;
