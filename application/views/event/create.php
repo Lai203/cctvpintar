@@ -7,38 +7,38 @@
     <?= $this->session->flashdata('message'); ?>
 
     <a href="<?= base_url('/admin/event') ?>" class="btn btn-primary mb-3">Back</a>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         <div class=" mb-3">
-            <label for="event_title" class="form-label">Judul Event</label>
-            <input type="text" class="form-control" id="event_title" name="event_title" placeholder="Your title here">
+            <label for="nama_event" class="form-label">Nama Event</label>
+            <input type="text" class="form-control" id="nama_event" name="nama_event" placeholder="Masukkan Nama Event">
         </div>
         <div class="mb-3">
-            <label for="event_description" class="form-label">Deskripsi Event</label>
-            <input type="text" class="form-control" id="event_description" name="event_description" placeholder="Your description here">
+            <label for="deskripsi_event" class="form-label">Deskripsi Event</label>
+            <input type="text" class="form-control" id="deskripsi_event" name="deskripsi_event" placeholder="Masukkan Deskripsi Event">
         </div>
         <div class="mb-3">
-            <label for="event_date" class="form-label">Tanggal</label>
-            <input type="date" class="form-control" id="event_date" name="event_date" placeholder="Your date here">
+            <label for="tanggal_event" class="form-label">Tanggal</label>
+            <input type="date" class="form-control" id="tanggal_event" name="tanggal_event">
         </div>
         <div class="mb-3">
-            <label for="event_time" class="form-label">Waktu</label>
-            <input type="time" class="form-control" id="event_time" name="event_time" placeholder="Your date here">
+            <label for="waktu_event" class="form-label">Waktu</label>
+            <input type="time" class="form-control" id="waktu_event" name="waktu_event">
         </div>
         <div class="mb-3">
-            <label for="event_location" class="form-label">Lokasi</label>
-            <input type="text" class="form-control" id="event_location" name="event_location" placeholder="Event Location here">
+            <label for="lokasi_event" class="form-label">Lokasi</label>
+            <input type="text" class="form-control" id="lokasi_event" name="lokasi_event" placeholder="Masukkan Lokasi Event">
         </div>
         <div class="mb-3">
-            <label for="event_thumbnail" class="form-label">Thumbnail</label>
-            <input type="file" class="form-control" id="event_thumbnail" name="event_thumbnail" placeholder="Your image">
+            <label for="thumbnail_event" class="form-label">Thumbnail</label>
+            <input type="file" class="form-control" id="thumbnail_event" name="thumbnail_event">
         </div>
         <div class="mb-3">
-            <label for="event_contact" class="form-label">Kontak</label>
-            <input type="tel" class="form-control" id="event_contact" name="event_contact" placeholder="Your Contact">
+            <label for="kontak_event" class="form-label">Kontak</label>
+            <input type="tel" class="form-control" id="kontak_event" name="kontak_event" placeholder="Masukkan Kontak Event">
         </div>
         <div class="mb-3">
-            <label for="event_status" class="form-label">Status</label>
-            <select class="form-control" name="event_status" id="event_status">
+            <label for="status_event" class="form-label">Status</label>
+            <select class="form-control" name="status_event" id="status_event">
                 <option value="">Pilih Status</option>
                 <option value="Upcoming">Upcoming</option>
                 <option value="Ongoing">Ongoing</option>

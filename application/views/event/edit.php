@@ -9,40 +9,40 @@
     <a href="<?= base_url('/admin/event') ?>" class="btn btn-primary mb-3">Back</a>
     <form method="post" enctype="multipart/form-data">
         <div class=" mb-3">
-            <label for="event_title" class="form-label">Judul Event</label>
-            <input type="text" class="form-control" id="event_title" name="event_title" placeholder="Your title here" value="<?= set_value('event_title', $events['event_title']); ?>">
+            <label for="nama_event" class="form-label">Judul Event</label>
+            <input type="text" class="form-control" id="nama_event" name="nama_event" placeholder="Masukkan Nama Event" value="<?= set_value('nama_event', $events['nama_event']); ?>">
         </div>
         <div class="mb-3">
-            <label for="event_description" class="form-label">Deskripsi Event</label>
-            <input type="text" class="form-control" id="event_description" name="event_description" placeholder="Your description here" value="<?= set_value('event_description', $events['event_description']); ?>">
+            <label for="deskripsi_event" class="form-label">Deskripsi Event</label>
+            <input type="text" class="form-control" id="deskripsi_event" name="deskripsi_event" placeholder="Masukkan Deskripsi Event" value="<?= set_value('deskripsi_event', $events['deskripsi_event']); ?>">
         </div>
         <div class="mb-3">
-            <label for="event_date" class="form-label">Tanggal</label>
-            <input type="date" class="form-control" id="event_date" name="event_date" placeholder="Your date here" value="<?= set_value('event_date', $events['event_date']); ?>">
+            <label for="tanggal_event" class="form-label">Tanggal</label>
+            <input type="date" class="form-control" id="tanggal_event" name="tanggal_event" value="<?= set_value('tanggal_event', $events['tanggal_event']); ?>">
         </div>
         <div class="mb-3">
-            <label for="event_time" class="form-label">Waktu</label>
-            <input type="time" class="form-control" id="event_time" name="event_time" placeholder="Your date here" value="<?= set_value('event_time', $events['event_time']); ?>">
+            <label for="waktu_event" class="form-label">Waktu</label>
+            <input type="time" class="form-control" id="waktu_event" name="waktu_event" value="<?= set_value('waktu_event', $events['waktu_event']); ?>">
         </div>
         <div class="mb-3">
-            <label for="event_location" class="form-label">Lokasi</label>
-            <input type="text" class="form-control" id="event_location" name="event_location" placeholder="Event Location here" value="<?= set_value('event_location', $events['event_location']); ?>">
+            <label for="lokasi_event" class="form-label">Lokasi</label>
+            <input type="text" class="form-control" id="lokasi_event" name="lokasi_event" placeholder="Masukkan Lokasi Event" value="<?= set_value('lokasi_event', $events['lokasi_event']); ?>">
         </div>
         <div class="mb-3">
-            <label for="event_thumbnail" class="form-label">Thumbnail</label>
-            <input type="file" class="form-control" id="event_thumbnail" name="event_thumbnail" placeholder="Your image" value="<?= set_value('event_thumbnail', $events['event_thumbnail']); ?>">
+            <label for="thumbnail_event" class="form-label">Thumbnail</label>
+            <input type="file" class="form-control" id="thumbnail_event" name="thumbnail_event">
         </div>
         <div class="mb-3">
-            <label for="event_contact" class="form-label">Kontak</label>
-            <input type="tel" class="form-control" id="event_contact" name="event_contact" placeholder="Your Contact" value="<?= set_value('event_contact', $events['event_contact']); ?>">
+            <label for="kontak_event" class="form-label">Kontak</label>
+            <input type="tel" class="form-control" id="kontak_event" name="kontak_event" placeholder="Masukkan Kontak Event" value="<?= set_value('kontak_event', $events['kontak_event']); ?>">
         </div>
         <div class="mb-3">
-            <label for="event_status" class="form-label">Status</label>
-            <select class="form-control" name="event_status" id="event_status">
+            <label for="status_event" class="form-label">Status</label>
+            <select class="form-control" name="status_event" id="status_event">
                 <option value="">Pilih Status</option>
-                <option value="Upcoming" <?= ($events['event_status'] === 'Upcoming') ? 'selected' : ''; ?>>Upcoming</option>
-                <option value="Ongoing" <?= ($events['event_status'] === 'Ongoing') ? 'selected' : ''; ?>>Ongoing</option>
-                <option value="Completed" <?= ($events['event_status'] === 'Ongoing') ? 'selected' : ''; ?>>Completed</option>
+                <option value="Upcoming" <?= ($events['status_event'] === 'Upcoming') ? 'selected' : ''; ?>>Upcoming</option>
+                <option value="Ongoing" <?= ($events['status_event'] === 'Ongoing') ? 'selected' : ''; ?>>Ongoing</option>
+                <option value="Completed" <?= ($events['status_event'] === 'Ongoing') ? 'selected' : ''; ?>>Completed</option>
             </select>
         </div>
         <div class="input-footer">
