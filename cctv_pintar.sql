@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Mar 2024 pada 09.33
+-- Waktu pembuatan: 18 Mar 2024 pada 04.04
 -- Versi server: 10.4.25-MariaDB
 -- Versi PHP: 7.4.30
 
@@ -70,7 +70,8 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`id_artikel`, `judul_artikel`, `deskripsi_artikel`, `thumbnail_artikel`, `isi_artikel`, `keyword_artikel`, `status_artikel`, `tags_artikel`, `slug_artikel`, `tanggal_dibuat_artikel`, `tanggal_update_artikel`, `id_kategori_artikel`, `last_updated`) VALUES
-(9, '123123', '12313', 'ff21b76a878480bd00473f44f0d8e486.jpg', '<p>123123</p>', '13123', 'Review', '123123', '123123-2', '0123-03-12', NULL, 1, NULL);
+(9, '123123', '12313', 'ff21b76a878480bd00473f44f0d8e486.jpg', '<p>123123</p>', '13123', 'Review', '123123', '123123-2', '0123-03-12', NULL, 1, NULL),
+(11, 'ini adalah judul smart article', 'ini adalah deskripsi', '816ea64d1985b5967fe4b337d3f47647.jpg', '<p>Ini adalah kontan</p>', 'contoh keyword', 'Review', 'tags1, tags2', 'ini-adalah-judul-smart-article-2', '2024-03-18', '0000-00-00', 3, '2024-03-18 09:51:28');
 
 -- --------------------------------------------------------
 
@@ -186,7 +187,8 @@ CREATE TABLE `kategori_artikel` (
 
 INSERT INTO `kategori_artikel` (`id_kategori_artikel`, `nama_kategori_artikel`, `deskripsi_kategori_artikel`) VALUES
 (1, 'Digital Security', 'Ini adalah digital Security'),
-(2, 'Cyber Crime', 'Ini adalah cyber crime');
+(2, 'Cyber Crime', 'Ini adalah cyber crime'),
+(3, 'Smart Technology', 'Ini adalah smart technology');
 
 -- --------------------------------------------------------
 
@@ -265,6 +267,13 @@ CREATE TABLE `rekan_perusahaan` (
   `nama` varchar(255) NOT NULL,
   `logo` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `rekan_perusahaan`
+--
+
+INSERT INTO `rekan_perusahaan` (`id`, `nama`, `logo`) VALUES
+(3, '123', '174af4c25415a2a03785866d4afbcdd2.jpg');
 
 --
 -- Indexes for dumped tables
@@ -353,7 +362,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT untuk tabel `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id_artikel` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_artikel` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `berita`
@@ -383,7 +392,7 @@ ALTER TABLE `jenis_produk`
 -- AUTO_INCREMENT untuk tabel `kategori_artikel`
 --
 ALTER TABLE `kategori_artikel`
-  MODIFY `id_kategori_artikel` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_kategori_artikel` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `kontak`
@@ -407,7 +416,7 @@ ALTER TABLE `profil`
 -- AUTO_INCREMENT untuk tabel `rekan_perusahaan`
 --
 ALTER TABLE `rekan_perusahaan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
