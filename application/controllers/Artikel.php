@@ -68,7 +68,7 @@ class Artikel extends CI_Controller
 			admin_template('artikel/edit', $data);
 		} else {
 			$dataInput = $this->input->post(null, true);
-			$dataInput['slug_artikel'] = $this->main->create_slug($dataInput['judul_artikel'], $dataInput['slug_artikel'], 'artikel');
+			$dataInput['slug_artikel'] = $this->main->create_slug($dataInput['judul_artikel'], 'slug_artikel', 'artikel');
 			if (!empty($_FILES['thumbnail_artikel']['name'])) {
 				deleteThumbnail($data['artikel']['thumbnail_artikel'], $this->path);
 				$dataInput['thumbnail_artikel'] = uploadThumbnail($this->path, 'artikel/edit', 'thumbnail_artikel', $data);
