@@ -1,58 +1,37 @@
-<?php
-// Get the current page from the URL
-$current_page = basename($_SERVER['PHP_SELF']);
+<body>
 
-// Get the main menu items from the database
-$menu = $this->db->get('main_menu')->result_array();
-?>
+	<!-- ======= Header ======= -->
+	<header id="header" class="fixed-top ">
+		<div class="container d-flex align-items-center">
 
-<!-- Responsive navbar-->
-<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<div class="container px-5">
-		<a class="navbar-brand" href="<?= base_url('home'); ?>">Rc Electronics <?= $title ?></a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-				<?php if (!empty($menu)) : ?>
-					<?php foreach ($menu as $m) : ?>
-						<?php $is_active = ($current_page == $m['main_menu']) ? 'active' : ''; ?>
-						<li class="nav-item <?= $is_active; ?>">
-							<a class="nav-link pb-0" href="<?= base_url($m['main_menu']) ?>"><?= $m['main_menu'] ?></a>
-						</li>
-					<?php endforeach; ?>
-				<?php endif; ?>
-			</ul>
+			<h1 class="logo me-auto"><img src="asset/Logo CCTV Pintar New Color.svg" scale="300%" alt="Rc Electronics, CCTV Pintar"></h1>
+			<!-- Uncomment below if you prefer to use an image logo -->
+			<!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+			<nav id="navbar" class="navbar">
+				<ul>
+					<li><a class="nav-link scrollto" href="<?= base_url('home') ?>">Home</a></li>
+					<li><a class="nav-link scrollto" href="<?= base_url('#product') ?>">Product</a></li>
+					<li><a class="nav-link scrollto" href="<?= base_url('article') ?>">Blog</a></li>
+					<li class="dropdown"><a href="#"><span>Tentang Kami</span> <img src="assets/images/chevron-down.svg" alt=""></a>
+						<ul>
+							<li><a href="#">Drop Down 1</a></li>
+							<li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+								<ul>
+									<li><a href="#">Deep Drop Down 1</a></li>
+									<li><a href="#">Deep Drop Down 2</a></li>
+									<li><a href="#">Deep Drop Down 3</a></li>
+									<li><a href="#">Deep Drop Down 4</a></li>
+									<li><a href="#">Deep Drop Down 5</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Drop Down 2</a></li>
+							<li><a href="#">Drop Down 3</a></li>
+							<li><a href="#">Drop Down 4</a></li>
+						</ul>
+					</li>
+					<i class="bi bi-list mobile-nav-toggle"></i>
+			</nav><!-- .navbar -->
+
 		</div>
-	</div>
-</nav> -->
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary" style="border-bottom: 4px solid black;">
-	<div class="container mx-auto  mb-2 mt-2">
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mb-2 mb-lg-0">
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#" style="color: #073950;">Beranda</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url('about') ?>" style="color: #073950;">Profil</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url('product') ?>" style="color: #073950;">Katalog</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url('article') ?>" style="color: #073950;">Artikel</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url('event') ?>" style="color: #073950;">Event</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?= base_url('news') ?>" style="color: #073950;">Berita</a>
-				</li>
-			</ul>
-		</div>
-		<a class="btn btn-primary" style="max-width: 200px; width: 100%; background-color: black; color: white;">Kontak Kami</a>
-	</div>
-</nav>
+	</header><!-- End Header -->
