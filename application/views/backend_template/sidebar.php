@@ -9,8 +9,9 @@
 	<hr class="sidebar-divider my-0">
 	<li class="nav-item">
 		<a class="nav-link" href="<?= base_url('admin/') ?>">
-			<i class="fas fa-fw fa-tachometer-alt"></i>
-			<span>Dashboard</span></a>
+			<img src="<?= base_url('asset') ?>/img/speedometer.svg" alt="" width="25">
+			<span>Dashboard</span>
+		</a>
 	</li>
 	<br>
 	<div class="sidebar-heading">
@@ -46,16 +47,8 @@
 			<i class="fas fa-fw fa-tachometer-alt"></i>
 			<span>Kontak</span></a>
 	</li>
-	<hr class="sidebar-divider d-none d-md-block">
-	<li class="nav-item">
-		<a class="nav-link" href="<?= base_url('auth/logout') ?> " onclick="return confirm('Are you sure you want to Logout?')">
-			<i class="fas fa-fw fa-tachometer-alt"></i>
-			<span>Logout</span></a>
-	</li>
-	<hr class="sidebar-divider d-none d-md-block">
-	<div class="text-center d-none d-md-inline">
-		<button class="rounded-circle border-0" id="sidebarToggle"></button>
-	</div>
+
+
 </ul>
 <div id="content-wrapper" class="d-flex flex-column">
 	<div id="content">

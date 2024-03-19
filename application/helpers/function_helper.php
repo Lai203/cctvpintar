@@ -5,6 +5,7 @@ function admin_template($view, $data)
     $tampilan = get_instance();
     $tampilan->load->view('backend_template/header.php', $data);
     $tampilan->load->view('backend_template/sidebar.php');
+    $tampilan->load->view('backend_template/topbar.php');
     $tampilan->load->view($view);
     $tampilan->load->view('backend_template/footer.php');
 }
