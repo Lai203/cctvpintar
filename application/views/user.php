@@ -212,6 +212,11 @@
 				<img src="asset/Gambar/Client/LCC Logo.png" alt="Logo LCC">
 				<img src="asset/Gambar/Client/Hadi Putra Jaya Logo.png" alt="Logo Hadi Putra Jaya">
 				<img src="asset/Gambar/Client/BPL Kahit Logo.png" alt="Logo PT. KAHIJI SELARAS KARYA">
+			</div>
+			<div class="arrow-left">
+				<i class="bi bi-arrow-left-circle"></i>
+			</div>
+			<div class="arrow">
 				<i class="bi bi-arrow-right-circle-fill"></i>
 			</div>
 		</div>
@@ -228,24 +233,36 @@
 			}
 
 			.container-kami h1 {
-				margin-top: 20px;
+				margin-top: 5px;
 			}
 
 			.logo-pelanggan {
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: right;
-				margin-top: -100px;
+				margin-top: -95px;
+			}
+
+			.arrow {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: right;
+				margin-top: -25px;
+			}
+
+			.arrow-left {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				margin-top: -40px;
+				margin-right: -50px;
+				margin-left: 100px;
 			}
 
 			.logo-pelanggan img {
 				margin: 10px;
 				width: 150px;
 			}
-
-			/* .logo-pelanggan i {
-				width: 500px;
-			} */
 
 			@media only screen and (max-width: 768px) {
 				.logo-pelanggan img {
@@ -258,46 +275,107 @@
 
 	<section id="layanan-kami">
 		<h1>Layanan Kami</h1>
-		<p>Kami di CCTV Pintar dari group CV. RC Electronic menyediakan pelayanan terbaik untuk solusi <br>
-			keamanan Anda. Berikut layanan kami:</p>
-		<div class="card">
-			<div class="card" style="width: 18rem; background-color:blue">
-				<img src="asset/Icon Layanan Kami/cctv.svg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title" style="color: white;">Kamera Keamanan</h5>
-					<p class="card-text" style="color: white;">Kami dengan bangga menyediakan layanan CCTV
-						profesional dengan pengalaman bertahun-tahun,
-						menjadi mitra terpercaya bagi individu dan bisnis
-						untuk menjaga keamanan aset dan memberikan
-						solusi pemantauan terbaik.</p>
-					<a href="#" class="btn btn-light">LIHAT PRODUK</a>
+		<p>Kami di CCTV Pintar dari group CV. RC Electronic menyediakan pelayanan terbaik untuk solusi keamanan Anda. Berikut layanan kami:</p>
+		<center>
+			<div class="layanan-kami-container">
+				<div class="layanan-kami-card">
+					<img src="asset/Icon Layanan Kami/cctv.svg" alt="...">
+					<h5>Kamera Keamanan</h5>
+					<p>Kami dengan bangga menyediakan layanan CCTV profesional dengan pengalaman bertahun-tahun, menjadi mitra terpercaya bagi individu dan bisnis untuk menjaga keamanan aset dan memberikan solusi pemantauan terbaik.</p>
+					<div class="btn btn-light">LIHAT PRODUK</div>
 				</div>
-			</div>
-			<div class="card" style="width: 18rem; background-color:blue">
-				<img src="asset/Icon Layanan Kami/truck.svg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title" style="color: white;">GPS Tracker</h5>
-					<p class="card-text" style="color: white;">Sebagai penyedia jasa installasi GPS terkemuka,
-						kami berkomitmen membantu Anda
-						memanfaatkan teknologi GPS untuk meningkatkan
-						efsiensi, keamanan, dan pemantauan dengan
-						solusi yang sesuai kebutuhan Anda.</p>
-					<a href="#" class="btn btn-light">LIHAT PRODUK</a>
-				</div>
-			</div>
-			<div class="card" style="width: 18rem; background-color:blue">
-				<img src="asset/Icon Layanan Kami/alarm.svg" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title" style="color: white;">Smart Home & Alaram</h5>
-					<p class="card-text" style="color: white;">Kami sebagai mitra terpercaya hadir dengan solusi
-						Smart Home dan Alarm terkini untuk
-						meningkatkan kenyamanan, keamanan, dan
-						efsiensi di rumah atau bisnis Anda.</p>
-					<a href="#" class="btn btn-light">LIHAT PRODUK</a>
-				</div>
-			</div>
-		</div>
 
+				<div class="layanan-kami-card">
+					<img src="asset/Icon Layanan Kami/truck.svg" alt="...">
+					<h5>GPS Tracker</h5>
+					<p>Sebagai penyedia jasa installasi GPS terkemuka, kami berkomitmen membantu Anda memanfaatkan teknologi GPS untuk meningkatkan efis,ensi, keamanan, dan pemantauan dengan solusi yang sesuai kebutuhan Anda.</p>
+					<div class="btn btn-light">LIHAT PRODUK</div>
+				</div>
+
+				<div class="layanan-kami-card">
+					<img src="asset/Icon Layanan Kami/alarm.svg" alt="...">
+					<h5>Smart Home & Alaram</h5>
+					<p>Kami sebagai mitra terpercaya hadir dengan solusi Smart Home dan Alarm terkini untuk meningkatkan kenyamanan, keamanan, dan efis,ensi di rumah atau bisnis Anda.</p>
+					<div class="btn btn-light">LIHAT PRODUK</div>
+				</div>
+		</center>
+		</div>
+		<style>
+			#layanan-kami {
+				background-color: #f7f7f7;
+				padding: 50px 0;
+				text-align: center;
+			}
+
+			.layanan-kami-container {
+				max-width: 1200px;
+				margin: 0 auto;
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.layanan-kami-card {
+				margin: 10px;
+				width: 300px;
+				background-color: #378CE7;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+				border-radius: 10px;
+			}
+
+			.layanan-kami-card img {
+				width: 50px;
+				height: 60px;
+				border-radius: 10px 10px 0 0;
+			}
+
+			.layanan-kami-card h5 {
+				margin: 10px 0;
+				padding: 0 10px;
+				font-size: 18px;
+				color: white;
+
+			}
+
+			.layanan-kami-card p {
+				padding: 0 10px;
+				font-size: 9px;
+				color: white;
+			}
+
+			.layanan-kami-card a {
+				margin: 10px auto;
+				display: block;
+				padding: 10px 20px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				text-decoration: none;
+				color: blue;
+			}
+
+			@media only screen and (max-width: 768px) {
+				.layanan-kami-card {
+					width: 100%;
+				}
+			}
+
+			#layanan-kami .btn {
+				border-radius: 50px;
+				padding: 10px 20px;
+				display: inline-block;
+				text-decoration: none;
+			}
+
+			#layanan-kami .btn-light {
+				background-color: #f8f9fa;
+				color: #212529;
+				border: 1px solid #dee2e6;
+			}
+
+			#layanan-kami .btn-light:hover {
+				background-color: #e2e6ea;
+				color: #212529;
+			}
+		</style>
 	</section>
 
 	<section id="pertanyaan">
