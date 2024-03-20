@@ -1,54 +1,82 @@
-<!-- Sidebar -->
-<ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #182434;">
-	<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-		<div class="sidebar-brand-icon rotate-n-15">
-			<i class="fas fa-laugh-wink"></i>
-		</div>
-		<div class="sidebar-brand-text mx-3">CCTV Pintar</div>
-	</a>
-	<hr class="sidebar-divider my-0">
-	<li class="nav-item">
-		<a class="nav-link" href="<?= base_url('admin/') ?>">
-			<img src="<?= base_url('asset') ?>/img/speedometer.svg" alt="" width="25">
-			<span>Dashboard</span>
-		</a>
-	</li>
-	<br>
-	<div class="sidebar-heading">
-		Kelola Data
+<div id="layoutSidenav">
+
+	<div id="layoutSidenav_nav">
+		<a class="sb-topnav navbar-brand navbar-brand px-4 py-4 fs-4" href="<?= base_url('admin') ?>">CCTV PINTAR</a>
+		<nav class="sb-sidenav accordion sb-sidenav-white border-end" id="sidenavAccordion">
+			<div class="sb-sidenav-menu">
+				<ul class="navbar-nav ms-auto ms-md-0 me-lg-4 navbar-brand px-4 mt-3">
+					<li class="nav-item dropdown">
+						<a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">
+							<div class="d-flex align-items-center">
+								<img class="img-profile rounded-circle" src="<?= base_url('asset/') ?>undraw_profile.svg" alt="" width="50">
+								<span class="ms-2 d-none d-lg-block">Admin123</span>
+							</div>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<br>
+				<div class="nav">
+					<a class="nav-link text-dark ms-2" href="<?= base_url('admin/') ?>">
+						<div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt text-dark"></i></div>
+						Dashboard
+					</a>
+					<div class="sb-sidenav-menu-heading text-primary">Kelola Data</div>
+
+					<a class="nav-link text-dark ms-2" href="<?= base_url('admin/artikel') ?>">
+						<div class="sb-nav-link-icon"><i class="fas fa-file-alt text-dark"></i></div>
+						Artikel
+					</a>
+					<a class="nav-link text-dark ms-2" href="<?= base_url('admin/produk') ?>">
+						<div class="sb-nav-link-icon"><i class="fas fa-cube text-dark"></i></div>
+						Produk
+					</a>
+					<a class="nav-link text-dark ms-2" href="<?= base_url('admin/berita') ?>">
+						<div class="sb-nav-link-icon"><i class="fas fa-newspaper text-dark"></i></div>
+						Berita
+					</a>
+					<a class="nav-link text-dark ms-2" href="<?= base_url('admin/event') ?>">
+						<div class="sb-nav-link-icon"><i class="fas fa-building text-dark"></i></div>
+						Event
+					</a>
+					<a class="nav-link text-dark ms-2" href="<?= base_url('admin/profil') ?>">
+						<div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt text-dark"></i></div>
+						Profil
+					</a>
+					<a class="nav-link text-dark ms-2" href="<?= base_url('admin/kontak') ?>">
+						<div class="sb-nav-link-icon"><i class="fas fa-envelope text-dark"></i></div>
+						Kontak
+					</a>
+				</div>
+			</div>
+			<div class="sb-sidenav-footer">
+
+			</div>
+		</nav>
 	</div>
-	<li class="nav-item">
-		<a class="nav-link" href="<?= base_url('admin/artikel') ?>">
-			<i class="fas fa-fw fa-tachometer-alt"></i>
-			<span>Artikel</span></a>
-	</li>
-	<li class="nav-item">
-		<a class="nav-link" href="<?= base_url('admin/produk') ?>">
-			<i class="fas fa-fw fa-tachometer-alt"></i>
-			<span>Produk</span></a>
-	</li>
-	<li class="nav-item">
-		<a class="nav-link" href="<?= base_url('admin/berita') ?>">
-			<i class="fas fa-fw fa-tachometer-alt"></i>
-			<span>Berita</span></a>
-	</li>
-	<li class="nav-item">
-		<a class="nav-link" href="<?= base_url('admin/event') ?>">
-			<i class="fas fa-fw fa-tachometer-alt"></i>
-			<span>Event</span></a>
-	</li>
-	<li class="nav-item">
-		<a class="nav-link" href="<?= base_url('admin/profil') ?>">
-			<i class="fas fa-fw fa-tachometer-alt"></i>
-			<span>Profil</span></a>
-	</li>
-	<li class="nav-item">
-		<a class="nav-link" href="<?= base_url('admin/kontak') ?>">
-			<i class="fas fa-fw fa-tachometer-alt"></i>
-			<span>Kontak</span></a>
-	</li>
 
 
-</ul>
-<div id="content-wrapper" class="d-flex flex-column">
-	<div id="content">
+	<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					Select "Logout" below if you are ready to end your current session.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+					<a class="btn btn-primary" href="<?= base_url('auth/logout') ?>">Logout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="layoutSidenav_content" class="">
+		<main>
+			<div class="container-fluid ps-4">

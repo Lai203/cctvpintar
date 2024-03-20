@@ -1,28 +1,27 @@
-<!-- Footer -->
-<footer class="sticky-footer bg-white">
-	<div class="container my-auto">
-		<div class="copyright text-center my-auto">
-			<span>Copyright &copy; Your Website 2020</span>
+</div>
+</main>
+
+<footer class="py-4 bg-light mt-auto">
+	<div class="container-fluid px-4">
+		<div class="d-flex align-items-center justify-content-between small">
+			<div class="text-muted">Copyright &copy; Your Website 2023</div>
+			<div>
+				<a href="#">Privacy Policy</a>
+				&middot;
+				<a href="#">Terms &amp; Conditions</a>
+			</div>
 		</div>
 	</div>
 </footer>
 </div>
 </div>
-<a class="scroll-to-top rounded" href="#page-top">
-	<i class="fas fa-angle-up"></i>
-</a>
-
-
-
-
-<script src="<?= base_url('asset/') ?>vendor/jquery/jquery.min.js"></script>
-<script src=" <?= base_url('asset/') ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="<?= base_url('asset/') ?>vendor/jquery-easing/jquery.easing.min.js"></script>
-<script src=" <?= base_url('asset/') ?>js/sb-admin-2.min.js"></script>
-<script src=" <?= base_url('asset/') ?>vendor/datatables/jquery.dataTables.min.js"></script>
-<script src=" <?= base_url('asset/') ?>vendor/datatables/dataTables.bootstrap4.min.js"></script>
-<script src=" <?= base_url('asset/') ?>js/demo/datatables-demo.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="<?= base_url('asset/') ?>js/scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+<script src="<?= base_url('asset/') ?>js/chart-area-demo.js"></script>
+<script src="<?= base_url('asset/') ?>js/chart-bar-demo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+<script src="<?= base_url('asset/') ?>js/datatables-simple-demo.js"></script>
 </body>
 
 </html>

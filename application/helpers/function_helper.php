@@ -5,7 +5,6 @@ function admin_template($view, $data)
     $tampilan = get_instance();
     $tampilan->load->view('backend_template/header.php', $data);
     $tampilan->load->view('backend_template/sidebar.php');
-    $tampilan->load->view('backend_template/topbar.php');
     $tampilan->load->view($view);
     $tampilan->load->view('backend_template/footer.php');
 }
@@ -34,10 +33,10 @@ function deleteImageContent($deleted_image, $path)
         }
     }
 }
-function uploadThumbnail($upload_path, $view, $image, $data)
+function uploadThumbnail($path, $view, $image, $data)
 {
     $CI = get_instance();
-    $config['upload_path'] = $upload_path;
+    $config['upload_path'] = $path;
     $config['allowed_types'] = 'gif|jpg|jpeg|png|bmp|svg';
     $config['encrypt_name'] = TRUE;
     $CI->load->library('upload');
@@ -50,9 +49,9 @@ function uploadThumbnail($upload_path, $view, $image, $data)
     $img = $CI->upload->data();
     return $img['file_name'];
 }
-function deleteThumbnail($data, $upload_path)
+function deleteThumbnail($image, $path)
 {
-    if ($data && is_file($upload_path . $data)) {
-        unlink($upload_path . $data);
+    if ($image && is_file($path . $image)) {
+        unlink($path . $image);
     }
 }

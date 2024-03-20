@@ -44,6 +44,7 @@ class Artikel extends CI_Controller
 	{
 		$data['title'] = "Buat Artikel Baru";
 		$data['kategori_artikel'] = $this->main->get('kategori_artikel');
+		$data['menu'] = $data['title'];
 		$this->validation();
 		if ($this->form_validation->run() == FALSE) {
 			admin_template('artikel/create', $data);
@@ -95,6 +96,7 @@ class Artikel extends CI_Controller
 	public function create_kategori()
 	{
 		$data['title'] = "Buat Kategori Baru";
+		$data['menu'] = $data['title'];
 		$this->validation_kategori();
 		if ($this->form_validation->run() == FALSE) {
 			admin_template('artikel/create_kategori', $data);
